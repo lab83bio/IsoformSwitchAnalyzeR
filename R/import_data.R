@@ -1634,8 +1634,7 @@ importGTF <- function(
                     dplyr::full_join(
                         orfInfo,
                         unique(myIsoAnot[, 'isoform_id', drop = FALSE]),
-                        by = 'isoform_id',
-                        all = TRUE
+                        by = 'isoform_id'
                     )
 
             } else {
@@ -2013,8 +2012,7 @@ importGTF <- function(
                 orfInfo <-
                     dplyr::full_join(orfInfo,
                                      unique(myIsoAnot[, 'isoform_id', drop = FALSE]),
-                                     by = 'isoform_id',
-                                     all = TRUE)
+                                     by = 'isoform_id')
 
             } else {
                 # if no CDS were found
@@ -5249,8 +5247,7 @@ importSalmonData <- function(
                 dplyr::full_join(
                     orfInfo,
                     localCm[, 'isoform_id', drop = FALSE],
-                    by = 'isoform_id',
-                    all = TRUE
+                    by = 'isoform_id'
                 )
 
             # Annotate ORF origin
